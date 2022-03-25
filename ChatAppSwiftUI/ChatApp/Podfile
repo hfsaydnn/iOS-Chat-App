@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+target 'ChatApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ChatApp
+  pod 'FBSDKCoreKit', '=  12.1.0'
+  pod 'FBSDKLoginKit', '=  12.1.0'
+  pod 'FBSDKShareKit', '=  12.1.0'
+
+  pod 'Firebase/Core', '=  8.9.1'
+  pod 'Firebase/Auth', '=  8.9.1'
+  pod 'Firebase/Database', '=  8.9.1'
+  pod 'Firebase/Messaging', '=  8.9.1'
+  pod 'Firebase/Storage', '=  8.9.1'
+  pod 'Firebase/Firestore', '=  8.9.1'
+
+  pod 'Alamofire', '=  5.4.4'
+  pod 'Kingfisher', '=  7.1.1'
+  pod 'YPImagePicker', '=  5.0.0'
+
+  post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+    end
+  end
+end

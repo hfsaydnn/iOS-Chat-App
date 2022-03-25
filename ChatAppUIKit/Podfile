@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+target 'ChatApp' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  # Pods for ChatApp
+
+  pod 'FBSDKCoreKit', '=  9.0.1'
+  pod 'FBSDKLoginKit', '=  9.0.1'
+  pod 'FBSDKShareKit', '=  9.0.1'
+
+  pod 'Firebase/Core', '=  7.6.0'
+  pod 'Firebase/Auth', '=  7.6.0'
+  pod 'Firebase/Database', '=  7.6.0'
+  pod 'Firebase/Messaging', '=  7.6.0'
+  pod 'Firebase/Storage', '=  7.6.0'
+  pod 'Firebase/Firestore', '=  7.6.0'
+
+  pod 'Alamofire', '=  5.4.1'
+  pod 'Kingfisher', '=  6.1.0'
+
+  pod 'Eureka', '=  5.3.2'
+
+end
